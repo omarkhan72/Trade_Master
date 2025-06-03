@@ -19,6 +19,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
+import { RootStackParamList } from '../types/navigation';
 
 const { width } = Dimensions.get('window');
 
@@ -27,6 +28,7 @@ const TradeSimulatorScreen: React.FC<NavigationProps<'TradeSimulator'>> = ({ nav
   const [stopLoss, setStopLoss] = useState(1.20);
   const [takeProfit, setTakeProfit] = useState(1.40);
   const [lotSize, setLotSize] = useState('0.1 Lot');
+  const [selectedTool, setSelectedTool] = useState('');
 
   const renderTab = (tabName: string) => {
     const isActive = activeTab === tabName;
@@ -41,6 +43,13 @@ const TradeSimulatorScreen: React.FC<NavigationProps<'TradeSimulator'>> = ({ nav
         {isActive && <View style={styles.activeTabIndicator} />}
       </TouchableOpacity>
     );
+  };
+  
+  const handleToolPress = (toolName: string, navigateTo?: keyof RootStackParamList) => {
+    setSelectedTool(toolName);
+    if (navigateTo) {
+      navigation.navigate(navigateTo);
+    }
   };
 
   return (
@@ -123,25 +132,34 @@ const TradeSimulatorScreen: React.FC<NavigationProps<'TradeSimulator'>> = ({ nav
           
           {/* Tool Buttons */}
           <View style={styles.toolButtonsContainer}>
-            <TouchableOpacity style={styles.toolButton}>
+            <TouchableOpacity 
+              style={[styles.toolButton, selectedTool === 'AI Screener' && styles.selectedToolButton]}
+              onPress={() => handleToolPress('AI Screener', 'AIScreenerAssistant')}
+            >
               <View style={styles.iconContainer}>
-                <MaterialCommunityIcons name="robot" size={22} color="#888" />
+                <MaterialCommunityIcons name="robot" size={22} color={selectedTool === 'AI Screener' ? '#0099FF' : '#888'} />
               </View>
-              <Text style={styles.toolButtonText}>AI Screener</Text>
+              <Text style={[styles.toolButtonText, selectedTool === 'AI Screener' && styles.selectedToolText]}>AI Screener</Text>
             </TouchableOpacity>
             
-            <TouchableOpacity style={styles.toolButton}>
+            <TouchableOpacity 
+              style={[styles.toolButton, selectedTool === 'Patterns' && styles.selectedToolButton]}
+              onPress={() => handleToolPress('Patterns', 'PatternQuiz')}
+            >
               <View style={styles.iconContainer}>
-                <MaterialCommunityIcons name="chart-line-variant" size={22} color="#888" />
+                <MaterialCommunityIcons name="chart-line-variant" size={22} color={selectedTool === 'Patterns' ? '#0099FF' : '#888'} />
               </View>
-              <Text style={styles.toolButtonText}>Patterns</Text>
+              <Text style={[styles.toolButtonText, selectedTool === 'Patterns' && styles.selectedToolText]}>Patterns</Text>
             </TouchableOpacity>
             
-            <TouchableOpacity style={styles.toolButton}>
+            <TouchableOpacity 
+              style={[styles.toolButton, selectedTool === 'Guide' && styles.selectedToolButton]}
+              onPress={() => handleToolPress('Guide')}
+            >
               <View style={styles.iconContainer}>
-                <MaterialIcons name="menu-book" size={22} color="#888" />
+                <MaterialIcons name="menu-book" size={22} color={selectedTool === 'Guide' ? '#0099FF' : '#888'} />
               </View>
-              <Text style={styles.toolButtonText}>Guide</Text>
+              <Text style={[styles.toolButtonText, selectedTool === 'Guide' && styles.selectedToolText]}>Guide</Text>
             </TouchableOpacity>
           </View>
           
@@ -347,6 +365,11 @@ const styles = StyleSheet.create({
     height: 84,
     justifyContent: 'center',
   },
+  selectedToolButton: {
+    backgroundColor: '#1c1c1c',
+    borderWidth: 1,
+    borderColor: '#0099FF33',
+  },
   iconContainer: {
     marginBottom: 8,
   },
@@ -354,6 +377,9 @@ const styles = StyleSheet.create({
     color: '#888',
     fontSize: 13,
     textAlign: 'center',
+  },
+  selectedToolText: {
+    color: '#0099FF',
   },
   placeTradeButton: {
     backgroundColor: '#0099FF',

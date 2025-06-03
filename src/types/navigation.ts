@@ -14,6 +14,8 @@ export type RootStackParamList = {
   TopMovers: undefined;
   News: undefined;
   TradeSimulator: undefined;
+  AIScreenerAssistant: undefined;
+  PatternQuiz: undefined;
   Trade: undefined;
   Learn: undefined;
   Profile: undefined;

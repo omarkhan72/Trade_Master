@@ -6,6 +6,8 @@ import HomeScreen from './HomeScreen';
 import DailyProfitScreen from './DailyProfitScreen';
 import NewsScreen from './NewsScreen';
 import TradeSimulatorScreen from './TradeSimulatorScreen';
+import AIScreenerAssistantScreen from './AIScreenerAssistantScreen';
+import PatternQuizScreen from './PatternQuizScreen';
 
 export {
   OnboardingScreen,
@@ -16,4 +18,6 @@ export {
   DailyProfitScreen,
   NewsScreen,
   TradeSimulatorScreen,
+  AIScreenerAssistantScreen,
+  PatternQuizScreen,
 }; 

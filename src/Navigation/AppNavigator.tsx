@@ -1,12 +1,13 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
-import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4, NewsScreen, TradeSimulatorScreen } from '../Screens';
+import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4, NewsScreen, TradeSimulatorScreen, AIScreenerAssistantScreen } from '../Screens';
 import HomeScreen from '../Screens/HomeScreen';
 import DailyProfitScreen from '../Screens/DailyProfitScreen';
 import OpenPositionsScreen from '../Screens/OpenPositionsScreen';
 import CashManagementScreen from '../Screens/CashManagementScreen';
 import TopMoversScreen from '../Screens/TopMoversScreen';
+import PatternQuizScreen from '../Screens/PatternQuizScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -32,6 +33,8 @@ const AppNavigator = () => {
       <Stack.Screen name="TopMovers" component={TopMoversScreen} />
       <Stack.Screen name="News" component={NewsScreen} />
       <Stack.Screen name="TradeSimulator" component={TradeSimulatorScreen} />
+      <Stack.Screen name="AIScreenerAssistant" component={AIScreenerAssistantScreen} />
+      <Stack.Screen name="PatternQuiz" component={PatternQuizScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );
