@@ -4,6 +4,7 @@ import OnboardingScreen3 from './OnboardingScreen3';
 import OnboardingScreen4 from './OnboardingScreen4';
 import HomeScreen from './HomeScreen';
 import DailyProfitScreen from './DailyProfitScreen';
+import NewsScreen from './NewsScreen';
 
 export {
   OnboardingScreen,
@@ -12,4 +13,5 @@ export {
   OnboardingScreen4,
   HomeScreen,
   DailyProfitScreen,
+  NewsScreen,
 }; 

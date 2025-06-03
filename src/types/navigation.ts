@@ -11,6 +11,8 @@ export type RootStackParamList = {
   DailyProfit: undefined;
   OpenPositions: undefined;
   CashManagement: undefined;
+  TopMovers: undefined;
+  News: undefined;
   Trade: undefined;
   Learn: undefined;
   Profile: undefined;

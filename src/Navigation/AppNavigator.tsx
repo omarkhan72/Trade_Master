@@ -1,12 +1,12 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
-import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4 } from '../Screens';
-import { CardStyleInterpolators } from '@react-navigation/stack';
+import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4, NewsScreen } from '../Screens';
 import HomeScreen from '../Screens/HomeScreen';
 import DailyProfitScreen from '../Screens/DailyProfitScreen';
 import OpenPositionsScreen from '../Screens/OpenPositionsScreen';
 import CashManagementScreen from '../Screens/CashManagementScreen';
+import TopMoversScreen from '../Screens/TopMoversScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -17,7 +17,6 @@ const AppNavigator = () => {
       screenOptions={{
         headerShown: false,
         gestureEnabled: true,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         animation: 'slide_from_right',
         animationDuration: 300,
       }}
@@ -30,6 +29,8 @@ const AppNavigator = () => {
       <Stack.Screen name="DailyProfit" component={DailyProfitScreen} />
       <Stack.Screen name="OpenPositions" component={OpenPositionsScreen} />
       <Stack.Screen name="CashManagement" component={CashManagementScreen} />
+      <Stack.Screen name="TopMovers" component={TopMoversScreen} />
+      <Stack.Screen name="News" component={NewsScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );

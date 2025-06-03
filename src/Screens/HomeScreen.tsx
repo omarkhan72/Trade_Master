@@ -93,25 +93,37 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
           
           <View style={styles.moversContainer}>
             {/* AAPL */}
-            <View style={styles.moverCard}>
+            <TouchableOpacity 
+              style={styles.moverCard}
+              onPress={() => navigation?.navigate('TopMovers')}
+              activeOpacity={0.7}
+            >
               <Text style={styles.stockSymbol}>AAPL</Text>
               <Text style={styles.stockPercentGain}>+3.2%</Text>
               <Text style={styles.stockPrice}>$182.89</Text>
-            </View>
+            </TouchableOpacity>
             
             {/* BTC */}
-            <View style={styles.moverCard}>
+            <TouchableOpacity 
+              style={styles.moverCard}
+              onPress={() => navigation?.navigate('TopMovers')}
+              activeOpacity={0.7}
+            >
               <Text style={styles.stockSymbol}>BTC</Text>
               <Text style={styles.stockPercentLoss}>-1.1%</Text>
               <Text style={styles.stockPrice}>$43,250</Text>
-            </View>
+            </TouchableOpacity>
             
             {/* TSLA */}
-            <View style={styles.moverCard}>
+            <TouchableOpacity 
+              style={styles.moverCard}
+              onPress={() => navigation?.navigate('TopMovers')}
+              activeOpacity={0.7}
+            >
               <Text style={styles.stockSymbol}>TSLA</Text>
               <Text style={styles.stockPercentGain}>+2.8%</Text>
               <Text style={styles.stockPrice}>$248.50</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -134,7 +146,11 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
           <Text style={styles.sectionTitle}>Latest News</Text>
           
           {/* News Item 1 */}
-          <View style={styles.newsItem}>
+          <TouchableOpacity 
+            style={styles.newsItem}
+            onPress={() => navigation.navigate('News')}
+            activeOpacity={0.7}
+          >
             <Image 
               source={require('../Assets/Images/FRAME.png')} 
               style={styles.newsImage}
@@ -143,10 +159,14 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
               <Text style={styles.newsTitle}>Fed Signals Potential Rate Cuts in 2024</Text>
               <Text style={styles.newsTime}>2h ago</Text>
             </View>
-          </View>
+          </TouchableOpacity>
           
           {/* News Item 2 */}
-          <View style={styles.newsItem}>
+          <TouchableOpacity 
+            style={styles.newsItem}
+            onPress={() => navigation.navigate('News')}
+            activeOpacity={0.7}
+          >
             <Image 
               source={require('../Assets/Images/frame2.png')} 
               style={styles.newsImage}
@@ -155,7 +175,7 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
               <Text style={styles.newsTitle}>Tech Stocks Rally Amid AI Breakthroughs</Text>
               <Text style={styles.newsTime}>4h ago</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* Action Buttons */}
