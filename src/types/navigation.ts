@@ -16,6 +16,7 @@ export type RootStackParamList = {
   TradeSimulator: undefined;
   AIScreenerAssistant: undefined;
   PatternQuiz: undefined;
+  CandlestickCheatSheet: undefined;
   Trade: undefined;
   Learn: undefined;
   Profile: undefined;

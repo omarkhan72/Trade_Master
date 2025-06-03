@@ -144,7 +144,7 @@ const TradeSimulatorScreen: React.FC<NavigationProps<'TradeSimulator'>> = ({ nav
             
             <TouchableOpacity 
               style={[styles.toolButton, selectedTool === 'Patterns' && styles.selectedToolButton]}
-              onPress={() => handleToolPress('Patterns', 'PatternQuiz')}
+              onPress={() => handleToolPress('Patterns', 'CandlestickCheatSheet')}
             >
               <View style={styles.iconContainer}>
                 <MaterialCommunityIcons name="chart-line-variant" size={22} color={selectedTool === 'Patterns' ? '#0099FF' : '#888'} />

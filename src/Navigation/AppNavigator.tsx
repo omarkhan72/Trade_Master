@@ -8,6 +8,7 @@ import OpenPositionsScreen from '../Screens/OpenPositionsScreen';
 import CashManagementScreen from '../Screens/CashManagementScreen';
 import TopMoversScreen from '../Screens/TopMoversScreen';
 import PatternQuizScreen from '../Screens/PatternQuizScreen';
+import CandlestickCheatSheetScreen from '../Screens/CandlestickCheatSheetScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -35,6 +36,7 @@ const AppNavigator = () => {
       <Stack.Screen name="TradeSimulator" component={TradeSimulatorScreen} />
       <Stack.Screen name="AIScreenerAssistant" component={AIScreenerAssistantScreen} />
       <Stack.Screen name="PatternQuiz" component={PatternQuizScreen} />
+      <Stack.Screen name="CandlestickCheatSheet" component={CandlestickCheatSheetScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );

@@ -8,6 +8,7 @@ import NewsScreen from './NewsScreen';
 import TradeSimulatorScreen from './TradeSimulatorScreen';
 import AIScreenerAssistantScreen from './AIScreenerAssistantScreen';
 import PatternQuizScreen from './PatternQuizScreen';
+import CandlestickCheatSheetScreen from './CandlestickCheatSheetScreen';
 
 export {
   OnboardingScreen,
@@ -20,4 +21,5 @@ export {
   TradeSimulatorScreen,
   AIScreenerAssistantScreen,
   PatternQuizScreen,
+  CandlestickCheatSheetScreen,
 }; 
