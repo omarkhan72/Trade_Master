@@ -175,9 +175,8 @@ const TopMoversScreen: React.FC<NavigationProps<'TopMovers'>> = ({ navigation })
         <TouchableOpacity style={styles.viewAllButton}>
           <Text style={styles.viewAllButtonText}>View All Top Movers</Text>
         </TouchableOpacity>
-        
-        {/* Bottom indicator (home indicator line) */}
-        <View style={styles.homeIndicator} />
+     
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -396,15 +395,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
     fontWeight: 'bold',
   },
-  homeIndicator: {
-    width: 36,
-    height: 5,
-    backgroundColor: '#FFFFFF',
-    borderRadius: 3,
-    alignSelf: 'center',
-    marginBottom: 8,
-    opacity: 0.5,
-  },
+ 
 });
 
 export default TopMoversScreen; 

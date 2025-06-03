@@ -9,6 +9,7 @@ import CashManagementScreen from '../Screens/CashManagementScreen';
 import TopMoversScreen from '../Screens/TopMoversScreen';
 import PatternQuizScreen from '../Screens/PatternQuizScreen';
 import CandlestickCheatSheetScreen from '../Screens/CandlestickCheatSheetScreen';
+import TradeSetupDetailsScreen from '../Screens/TradeSetupDetailsScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -37,6 +38,7 @@ const AppNavigator = () => {
       <Stack.Screen name="AIScreenerAssistant" component={AIScreenerAssistantScreen} />
       <Stack.Screen name="PatternQuiz" component={PatternQuizScreen} />
       <Stack.Screen name="CandlestickCheatSheet" component={CandlestickCheatSheetScreen} />
+      <Stack.Screen name="TradeSetupDetails" component={TradeSetupDetailsScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );

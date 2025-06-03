@@ -154,7 +154,7 @@ const TradeSimulatorScreen: React.FC<NavigationProps<'TradeSimulator'>> = ({ nav
             
             <TouchableOpacity 
               style={[styles.toolButton, selectedTool === 'Guide' && styles.selectedToolButton]}
-              onPress={() => handleToolPress('Guide')}
+              onPress={() => handleToolPress('Guide', 'TradeSetupDetails')}
             >
               <View style={styles.iconContainer}>
                 <MaterialIcons name="menu-book" size={22} color={selectedTool === 'Guide' ? '#0099FF' : '#888'} />

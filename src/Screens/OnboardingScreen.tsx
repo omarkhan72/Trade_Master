@@ -71,7 +71,7 @@ const OnboardingScreen: React.FC<NavigationProps<'Onboarding'>> = ({ navigation 
 
         {/* Bottom Indicator */}
         <View style={styles.indicatorContainer}>
-          <View style={styles.indicator} />
+          {/* <View style={styles.indicator} /> */}
         </View>
       </View>
     </SafeAreaView>
@@ -166,12 +166,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
   },
-  indicator: {
-    width: width * 0.3,
-    height: 5,
-    backgroundColor: COLORS.white,
-    borderRadius: 5,
-  },
+ 
 });
 
 export default OnboardingScreen; 

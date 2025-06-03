@@ -119,7 +119,7 @@ const CashManagementScreen: React.FC<NavigationProps<'CashManagement'>> = ({ nav
         </TouchableOpacity>
         
         {/* Bottom indicator (home indicator line) */}
-        <View style={styles.homeIndicator} />
+        {/* <View style={styles.homeIndicator} /> */}
         
       </ScrollView>
     </SafeAreaView>
@@ -292,15 +292,15 @@ const styles = StyleSheet.create({
     fontSize: SIZES.small,
     fontWeight: 'bold',
   },
-  homeIndicator: {
-    width: 36,
-    height: 5,
-    backgroundColor: '#FFFFFF',
-    borderRadius: 3,
-    alignSelf: 'center',
-    marginBottom: 8,
-    opacity: 0.5,
-  },
+  // homeIndicator: {
+  //   width: 36,
+  //   height: 5,
+  //   backgroundColor: '#FFFFFF',
+  //   borderRadius: 3,
+  //   alignSelf: 'center',
+  //   marginBottom: 8,
+  //   opacity: 0.5,
+  // },
 });
 
 export default CashManagementScreen; 

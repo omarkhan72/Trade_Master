@@ -9,6 +9,7 @@ import TradeSimulatorScreen from './TradeSimulatorScreen';
 import AIScreenerAssistantScreen from './AIScreenerAssistantScreen';
 import PatternQuizScreen from './PatternQuizScreen';
 import CandlestickCheatSheetScreen from './CandlestickCheatSheetScreen';
+import TradeSetupDetailsScreen from './TradeSetupDetailsScreen';
 
 export {
   OnboardingScreen,
@@ -22,4 +23,5 @@ export {
   AIScreenerAssistantScreen,
   PatternQuizScreen,
   CandlestickCheatSheetScreen,
+  TradeSetupDetailsScreen,
 }; 

@@ -152,8 +152,8 @@ const CandlestickCheatSheetScreen: React.FC<NavigationProps<'CandlestickCheatShe
         <View style={styles.bottomSpace} />
       </ScrollView>
       
-      {/* Bottom Indicator */}
-      <View style={styles.bottomIndicator} />
+     
+      
     </SafeAreaView>
   );
 };
@@ -283,16 +283,7 @@ const styles = StyleSheet.create({
   bottomSpace: {
     height: 40,
   },
-  bottomIndicator: {
-    width: 135,
-    height: 5,
-    backgroundColor: '#666',
-    borderRadius: 2.5,
-    alignSelf: 'center',
-    marginBottom: 8,
-    position: 'absolute',
-    bottom: 0,
-  },
+ 
 });
 
 export default CandlestickCheatSheetScreen; 
