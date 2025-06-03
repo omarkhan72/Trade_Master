@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
-import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4, NewsScreen } from '../Screens';
+import { OnboardingScreen, OnboardingScreen2, OnboardingScreen3, OnboardingScreen4, NewsScreen, TradeSimulatorScreen } from '../Screens';
 import HomeScreen from '../Screens/HomeScreen';
 import DailyProfitScreen from '../Screens/DailyProfitScreen';
 import OpenPositionsScreen from '../Screens/OpenPositionsScreen';
@@ -31,6 +31,7 @@ const AppNavigator = () => {
       <Stack.Screen name="CashManagement" component={CashManagementScreen} />
       <Stack.Screen name="TopMovers" component={TopMoversScreen} />
       <Stack.Screen name="News" component={NewsScreen} />
+      <Stack.Screen name="TradeSimulator" component={TradeSimulatorScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );

@@ -198,12 +198,18 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
           <Text style={styles.tabLabelActive}>Home</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.tabItem} onPress={() => {}}>
+        <TouchableOpacity 
+          style={styles.tabItem} 
+          onPress={() => navigation.navigate('TradeSimulator')}
+        >
           <Icon name="bar-chart-2" size={24} color="#AAAAAA" />
           <Text style={styles.tabLabel}>Trade</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.tabItem} onPress={() => {}}>
+        <TouchableOpacity 
+          style={styles.tabItem} 
+          onPress={() => navigation.navigate('News')}
+        >
           <Ionicons name="school-outline" size={24} color="#AAAAAA" />
           <Text style={styles.tabLabel}>Learn</Text>
         </TouchableOpacity>

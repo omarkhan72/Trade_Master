@@ -13,6 +13,7 @@ export type RootStackParamList = {
   CashManagement: undefined;
   TopMovers: undefined;
   News: undefined;
+  TradeSimulator: undefined;
   Trade: undefined;
   Learn: undefined;
   Profile: undefined;
