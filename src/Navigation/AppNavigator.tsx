@@ -10,6 +10,8 @@ import TopMoversScreen from '../Screens/TopMoversScreen';
 import PatternQuizScreen from '../Screens/PatternQuizScreen';
 import CandlestickCheatSheetScreen from '../Screens/CandlestickCheatSheetScreen';
 import TradeSetupDetailsScreen from '../Screens/TradeSetupDetailsScreen';
+import LearnToTradeScreen from '../Screens/LearnToTradeScreen';
+import LessonLibraryScreen from '../Screens/LessonLibraryScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -39,6 +41,8 @@ const AppNavigator = () => {
       <Stack.Screen name="PatternQuiz" component={PatternQuizScreen} />
       <Stack.Screen name="CandlestickCheatSheet" component={CandlestickCheatSheetScreen} />
       <Stack.Screen name="TradeSetupDetails" component={TradeSetupDetailsScreen} />
+      <Stack.Screen name="LearnToTrade" component={LearnToTradeScreen} />
+      <Stack.Screen name="LessonLibrary" component={LessonLibraryScreen} />
       {/* Additional screens will be added here */}
     </Stack.Navigator>
   );

@@ -18,6 +18,8 @@ export type RootStackParamList = {
   PatternQuiz: undefined;
   CandlestickCheatSheet: undefined;
   TradeSetupDetails: undefined;
+  LearnToTrade: undefined;
+  LessonLibrary: undefined;
   Trade: undefined;
   Learn: undefined;
   Profile: undefined;

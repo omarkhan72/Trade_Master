@@ -15,6 +15,7 @@ import { NavigationProps } from '../types/navigation';
 import Icon from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const { width, height } = Dimensions.get('window');
 
@@ -191,32 +192,32 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
         <View style={styles.bottomSpace} />
       </ScrollView>
 
-      {/* Bottom Tab Navigation */}
-      <View style={styles.tabBar}>
-        <TouchableOpacity style={styles.tabItem} onPress={() => {}}>
-          <Icon name="home" size={24} color="#0099FF" />
-          <Text style={styles.tabLabelActive}>Home</Text>
+      {/* Footer Navigation */}
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.footerTabActive}>
+          <Ionicons name="home" size={24} color="#0099FF" />
+          <Text style={styles.footerTabTextActive}>Home</Text>
         </TouchableOpacity>
         
         <TouchableOpacity 
-          style={styles.tabItem} 
+          style={styles.footerTab}
+          onPress={() => navigation.navigate('LearnToTrade')}
+        >
+          <Ionicons name="book-outline" size={24} color="#666" />
+          <Text style={styles.footerTabText}>Learn</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity 
+          style={styles.footerTab}
           onPress={() => navigation.navigate('TradeSimulator')}
         >
-          <Icon name="bar-chart-2" size={24} color="#AAAAAA" />
-          <Text style={styles.tabLabel}>Trade</Text>
+          <MaterialCommunityIcons name="chart-line" size={24} color="#666" />
+          <Text style={styles.footerTabText}>Practice</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity 
-          style={styles.tabItem} 
-          onPress={() => navigation.navigate('News')}
-        >
-          <Ionicons name="school-outline" size={24} color="#AAAAAA" />
-          <Text style={styles.tabLabel}>Learn</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.tabItem} onPress={() => {}}>
-          <MaterialIcons name="person-outline" size={24} color="#AAAAAA" />
-          <Text style={styles.tabLabel}>Profile</Text>
+        <TouchableOpacity style={styles.footerTab}>
+          <Ionicons name="person-outline" size={24} color="#666" />
+          <Text style={styles.footerTabText}>Profile</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -436,31 +437,36 @@ const styles = StyleSheet.create({
   bottomSpace: {
     height: 60, // Height of the tab bar
   },
-  tabBar: {
+  footer: {
     flexDirection: 'row',
-    height: 60,
-    backgroundColor: '#0D0D0D',
-    borderTopWidth: 1,
-    borderTopColor: '#1A1A1A',
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
-    paddingBottom: 5,
+    backgroundColor: '#111',
+    borderTopWidth: 1,
+    borderTopColor: '#222',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
   },
-  tabItem: {
+  footerTab: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  tabLabel: {
-    fontSize: SIZES.xSmall,
-    color: COLORS.gray,
+  footerTabActive: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footerTabText: {
+    fontSize: 12,
+    color: '#666',
     marginTop: 4,
   },
-  tabLabelActive: {
-    fontSize: SIZES.xSmall,
-    color: COLORS.primary,
+  footerTabTextActive: {
+    fontSize: 12,
+    color: '#0099FF',
     marginTop: 4,
   },
 });
