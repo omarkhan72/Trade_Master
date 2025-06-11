@@ -215,7 +215,10 @@ const HomeScreen: React.FC<NavigationProps<'Home'>> = ({ navigation }) => {
           <Text style={styles.footerTabText}>Practice</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.footerTab}>
+        <TouchableOpacity 
+          style={styles.footerTab}
+          onPress={() => navigation.navigate('Profile')}
+        >
           <Ionicons name="person-outline" size={24} color="#666" />
           <Text style={styles.footerTabText}>Profile</Text>
         </TouchableOpacity>

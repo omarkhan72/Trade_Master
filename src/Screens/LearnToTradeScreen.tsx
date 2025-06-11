@@ -173,29 +173,6 @@ const LearnToTradeScreen: React.FC<NavigationProps<'LearnToTrade'>> = ({ navigat
         {/* Bottom Space */}
         <View style={styles.bottomSpace} />
       </ScrollView>
-      
-      {/* Footer */}
-      <View style={styles.footer}>
-        <TouchableOpacity style={styles.footerTab} onPress={() => navigation.navigate('Home')}>
-          <Ionicons name="home-outline" size={24} color="#666" />
-          <Text style={styles.footerTabText}>Home</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.footerTabActive}>
-          <Ionicons name="book" size={24} color="#0099FF" />
-          <Text style={styles.footerTabTextActive}>Learn</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.footerTab} onPress={() => navigation.navigate('TradeSimulator')}>
-          <MaterialCommunityIcons name="chart-line" size={24} color="#666" />
-          <Text style={styles.footerTabText}>Practice</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.footerTab}>
-          <Ionicons name="person-outline" size={24} color="#666" />
-          <Text style={styles.footerTabText}>Profile</Text>
-        </TouchableOpacity>
-      </View>
     </SafeAreaView>
   );
 };
@@ -208,7 +185,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    paddingBottom: 70, // Space for footer
+    paddingBottom: 80, // Space for footer
   },
   header: {
     paddingHorizontal: 20,
@@ -430,38 +407,7 @@ const styles = StyleSheet.create({
   bottomSpace: {
     height: 20,
   },
-  footer: {
-    flexDirection: 'row',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: '#111',
-    borderTopWidth: 1,
-    borderTopColor: '#222',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-  },
-  footerTab: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  footerTabActive: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  footerTabText: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 4,
-  },
-  footerTabTextActive: {
-    fontSize: 12,
-    color: '#0099FF',
-    marginTop: 4,
-  },
+ 
 });
 
 export default LearnToTradeScreen; 

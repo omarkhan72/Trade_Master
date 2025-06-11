@@ -12,6 +12,7 @@ import CandlestickCheatSheetScreen from './CandlestickCheatSheetScreen';
 import TradeSetupDetailsScreen from './TradeSetupDetailsScreen';
 import LearnToTradeScreen from './LearnToTradeScreen';
 import LessonLibraryScreen from './LessonLibraryScreen';
+import ProfileScreen from './ProfileScreen';
 
 export {
   OnboardingScreen,
@@ -28,4 +29,5 @@ export {
   TradeSetupDetailsScreen,
   LearnToTradeScreen,
   LessonLibraryScreen,
+  ProfileScreen,
 }; 
